@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Todo from './componentes/Todo.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App =() => {
+  const cabecera ="Hola Dojo!"
+  const titulo = "Things I need to do:"
+  return(
+    <div className = "App">
+      <div className="App-header">
+        <h1>{cabecera}</h1>
+        <h2>{titulo}</h2>
+        <Todo item="Learn React"/>
+        <Todo item="Climb"/>
+        <Todo item="Ryn a marathon"/>
+        <Todo item="Feed the dogs"/>
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;
